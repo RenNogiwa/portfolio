@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, ChevronDown, X } from 'lucide-react';
-import Header from './components/Header';
 import type { Project } from './types/Project';
+import profileImage from './assets/Profile_Image.JPG';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -33,7 +33,7 @@ function App() {
           'コンタクトフォーム機能'
         ],
         impact: 'ウェブサイトのパフォーマンススコアが95%を達成し、モバイルでの使用性を大幅に向上させました。',
-        link: 'https://example.com/portfolio'
+        link: 'https://github.com/RenNogiwa/portfolio'
       }
     },
     {
@@ -50,7 +50,7 @@ function App() {
           'カスタマーサポート機能'
         ],
         impact: '導入企業の売上が平均30%増加し、運営コストを20%削減することに成功しました。',
-        link: 'https://example.com/ec-platform'
+        link: 'https://github.com/RenNogiwa/ec-platform'
       }
     },
     {
@@ -67,7 +67,7 @@ function App() {
           'SNS統合'
         ],
         impact: 'モバイルからのアクセスが50%増加し、コンバージョン率が25%向上しました。',
-        link: 'https://example.com/responsive-website'
+        link: 'https://github.com/RenNogiwa/responsive-website'
       }
     }
   ];
@@ -77,11 +77,16 @@ function App() {
       {/* Hero Section */}
       <section className="relative h-screen flex flex-col items-center justify-center text-center px-4">
         <div className="mb-8">
-          <img
-            src="https://images.unsplash.com/photo-1520409364224-63400afe26e5?w=400&auto=format&fit=crop&q=60"
-            alt="Profile"
-            className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-white shadow-lg"
-          />
+          <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <img
+              src={profileImage}
+              alt="Profile"
+              className="w-full h-full object-cover"
+              style={{
+                objectPosition: "center 30%"
+              }}
+            />
+          </div>
           <h1 className="text-4xl font-bold mb-2">REN NOGIWA</h1>
           <h2 className="text-xl text-gray-600 mb-4">Data Analyst | BI Developer</h2>
           <div className="flex justify-center gap-4 mb-6">
@@ -152,8 +157,14 @@ function App() {
 
       {/* Project Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div 
+            className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="p-6">
               <div className="flex justify-between items-start mb-4">
                 <h2 className="text-2xl font-bold">{selectedProject.title}</h2>
