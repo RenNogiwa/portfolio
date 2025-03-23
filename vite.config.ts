@@ -8,4 +8,16 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   assetsInclude: ['**/*.JPG'],
+  server: {
+    host: true,
+    port: 5173,
+    open: true,
+  },
+  base: '/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    minify: true,
+  }
 });
