@@ -1,0 +1,7 @@
+[build]
+command = "npm run build"
+output_dir = "dist"
+
+[site]
+bucket = "./dist"
+entry-point = ".cloudflare/workers-site/index.js" 
