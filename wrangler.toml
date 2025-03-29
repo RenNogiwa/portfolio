@@ -16,7 +16,7 @@ command = "npm run build"
 format = "service-worker"
 
 [triggers]
-routes = ["/*"]
+routes = ["/api/*"]
 
 [compatibility_flags]
 nodejs_compat = true
