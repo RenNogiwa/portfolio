@@ -7,11 +7,11 @@ export default defineConfig({
   assetsInclude: ['**/*.JPG'],
   server: {
     proxy: {
-      '/functions': {
+      '/api': {
         target: 'http://localhost:58965',
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/functions/, '')
+        rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
   },
