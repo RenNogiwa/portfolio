@@ -19,4 +19,7 @@ format = "service-worker"
 routes = ["/*"]
 
 [compatibility_flags]
-nodejs_compat = true 
+nodejs_compat = true
+
+[env.production.vars]
+ENVIRONMENT = "production" 
