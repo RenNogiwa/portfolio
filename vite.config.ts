@@ -8,8 +8,19 @@ export default defineConfig({
   server: {
     proxy: {
       '/functions': {
-        target: 'http://localhost:56943',
+        target: 'http://localhost:58965',
         changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/functions/, '')
+      }
+    }
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
       }
     }
   }
