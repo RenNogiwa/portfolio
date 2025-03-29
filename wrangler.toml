@@ -16,10 +16,14 @@ command = "npm run build"
 format = "service-worker"
 
 [triggers]
-routes = ["/api/*"]
+routes = ["/api/contact"]
 
 [compatibility_flags]
 nodejs_compat = true
 
 [env.production.vars]
-ENVIRONMENT = "production" 
+ENVIRONMENT = "production"
+
+[[routes]]
+pattern = "/api/contact"
+zone_id = "*" 
