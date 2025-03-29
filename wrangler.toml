@@ -26,4 +26,5 @@ ENVIRONMENT = "production"
 
 [[routes]]
 pattern = "/api/contact"
-zone_id = "*" 
+zone_id = "*"
+methods = ["POST", "OPTIONS"] 
