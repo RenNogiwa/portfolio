@@ -5,7 +5,6 @@ import profileImage from './assets/Profile_Image.JPG';
 import { projects } from './data/projects';
 import { ProjectCard } from './components/ProjectCard';
 import { ProjectModal } from './components/ProjectModal';
-import { ContactForm } from './components/ContactForm';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -83,14 +82,6 @@ function App() {
           onClose={() => setSelectedProject(null)}
         />
       )}
-
-      {/* Contact Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">お問い合わせ</h2>
-          <ContactForm />
-        </div>
-      </section>
     </div>
   );
 }
