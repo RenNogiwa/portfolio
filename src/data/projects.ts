@@ -69,5 +69,51 @@ export const projects: Project[] = [
       impact: 'モバイルからのアクセスが50%増加し、コンバージョン率が25%向上しました。また、検索エンジンでの表示順位が改善され、新規顧客の獲得が大幅に増加しました。',
       link: 'https://github.com/RenNogiwa/responsive-website'
     }
+  },
+  {
+    title: 'データ可視化ダッシュボード',
+    description: 'インタラクティブなデータ可視化を提供するダッシュボード',
+    technologies: ['Python', 'Plotly', 'Dash', 'Pandas', 'Docker'],
+    image: 'https://images.unsplash.com/photo-1581093588401-22a48243388d?w=800&auto=format&fit=crop&q=60',
+    details: {
+      overview: '大量データを視覚的に分析できるダッシュボードを構築しました。PlotlyとDashを用いてリアルタイムデータ更新や複数データソースの統合を実装しました。',
+      features: [
+        'インタラクティブグラフ',
+        'リアルタイムデータ更新',
+        'フィルター機能',
+        'データのエクスポート',
+        'ダッシュボード共有',
+        'カスタムテーマ',
+        'レスポンシブレイアウト',
+        'ユーザー権限管理',
+        'ログ分析',
+        'マルチデータソース'
+      ],
+      impact: 'データ分析のスピードが向上し、ビジネスの意思決定を迅速化しました。ユーザーからのフィードバックで操作性が高く評価されました。',
+      link: 'https://github.com/RenNogiwa/data-dashboard'
+    }
+  },
+  {
+    title: '機械学習モデルデプロイ',
+    description: 'FlaskとDockerを使用した機械学習モデルのデプロイメント',
+    technologies: ['Python', 'Flask', 'scikit-learn', 'Docker', 'AWS'],
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60',
+    details: {
+      overview: '機械学習モデルをWebサービスとして提供するため、FlaskでREST APIを構築しDockerでコンテナ化しました。AWS上にデプロイし、継続的デリバリーを実現しています。',
+      features: [
+        'REST API',
+        'Dockerコンテナ化',
+        'モデル自動リロード',
+        'API認証',
+        'ロギング',
+        'パフォーマンス監視',
+        'CI/CDパイプライン',
+        'スケーラブルな構成',
+        'テスト自動化',
+        'クラウドデプロイ'
+      ],
+      impact: '予測サービスのダウンタイムを削減し、リリースサイクルを短縮しました。新モデルのデプロイが迅速に行えるようになりました。',
+      link: 'https://github.com/RenNogiwa/ml-deploy'
+    }
   }
-]; 
+];
