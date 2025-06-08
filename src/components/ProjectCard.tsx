@@ -8,8 +8,8 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
   return (
-    <div 
-      className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
+    <div
+      className="w-80 flex-shrink-0 bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
       onClick={onClick}
     >
       <img 

@@ -15,7 +15,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects, onPr
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-4 text-center">{SECTIONS.PROJECTS.title}</h2>
         <p className="text-gray-600 text-center mb-8">{SECTIONS.PROJECTS.subtitle}</p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex overflow-x-auto gap-8 pb-4">
           {projects.map((project) => (
             <ProjectCard
               key={project.title}
